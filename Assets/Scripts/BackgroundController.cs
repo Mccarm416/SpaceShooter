@@ -31,7 +31,6 @@ public class BackgroundController : MonoBehaviour {
 		_currentPos -= new Vector2 (speed, 0);
 		//Check position for reset
 		if (_currentPos.x < endX) {
-			Debug.Log ("Reseting at" + _currentPos + "\n");
 			Reset ();
 		}
 		//Apply changes

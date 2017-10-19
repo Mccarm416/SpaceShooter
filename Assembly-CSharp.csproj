@@ -51,7 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Animations\explosion.cs" />
      <Compile Include="Assets\Scripts\BackgroundController.cs" />
+     <Compile Include="Assets\Scripts\EnemyController01.cs" />
+     <Compile Include="Assets\Scripts\EnemyController02.cs" />
+     <Compile Include="Assets\Scripts\EnemyController03.cs" />
+     <Compile Include="Assets\Scripts\PickupController.cs" />
+     <Compile Include="Assets\Scripts\PlaneCollision.cs" />
+     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

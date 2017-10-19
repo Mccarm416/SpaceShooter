@@ -16,18 +16,17 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField]
 	private float botY;
 
-
-
 	private Transform _transform;
 	private Vector2 _currentPos;
 
 	void Start () {
+		//Initialize
 		_transform = gameObject.GetComponent<Transform> ();
 		_currentPos = _transform.position;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
+		//Player movement
 		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
 			_currentPos -= new Vector2 (speed, 0);
 		}
