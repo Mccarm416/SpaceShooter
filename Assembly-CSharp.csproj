@@ -56,8 +56,8 @@
      <Compile Include="Assets\Scripts\EnemyController01.cs" />
      <Compile Include="Assets\Scripts\EnemyController02.cs" />
      <Compile Include="Assets\Scripts\EnemyController03.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\PickupController.cs" />
-     <Compile Include="Assets\Scripts\PlaneCollision.cs" />
      <Compile Include="Assets\Scripts\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
  <Reference Include="UnityEngine.UI">
