@@ -44,7 +44,7 @@ public class EnemyController03 : MonoBehaviour {
 	public void Reset(){
 		float xSpeed = Random.Range (minXSpeed, maxXSpeed);
 		float ySpeed = Random.Range (minYSpeed, maxYSpeed);
-
+		//Set speed
 		_currentSpeed = new Vector2 (xSpeed, ySpeed);
 
 		//Place enemy in random location off of the screen

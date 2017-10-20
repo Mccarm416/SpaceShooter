@@ -41,6 +41,7 @@ public class PickupController : MonoBehaviour {
 	}
 
 	public void Reset(){
+		//Produces random speed
 		float xSpeed = Random.Range (minXSpeed, maxXSpeed);
 		float ySpeed = Random.Range (minYSpeed, maxYSpeed);
 

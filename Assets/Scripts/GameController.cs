@@ -6,14 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
+	/*
+	 * Created by Matthew McCarthy
+	 * Date created: Oct 20, 2017
+	 * Last modified: Oct 20, 2017
+	 * Desc: Handles functions of the UI
+	*/
+
+	//Life total in the upper right during game
 	[SerializeField]
 	Text lblLife;
+	//Score total in the upper left during game
 	[SerializeField]
 	Text lblScore;
+	//High score label displayed during game over
 	[SerializeField]
 	Text lblHighScore;
+	//Game over label
 	[SerializeField]
 	Text lblGameOver;
+	//Restart button displayed during game over; restarts the game.
 	[SerializeField]
 	Button btnRestart;
 
@@ -54,6 +66,7 @@ public class GameController : MonoBehaviour {
 		Debug.Log("High Score is: " + _highScore);
 		_score = 0;
 		_life = 3;
+		//Hide and display relevant labels
 		lblGameOver.gameObject.SetActive (false);
 		lblHighScore.gameObject.SetActive (false);
 		btnRestart.gameObject.SetActive (false);
@@ -74,6 +87,7 @@ public class GameController : MonoBehaviour {
 		else {
 			lblHighScore.text = "High Score: " + _highScore;
 		}
+		//Hide and display relevant labels
 		lblGameOver.gameObject.SetActive (true);
 		lblHighScore.gameObject.SetActive (true);
 		btnRestart.gameObject.SetActive (true);

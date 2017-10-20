@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class EnemyController02 : MonoBehaviour {
 
+	/*
+	 * Created by Matthew McCarthy
+	 * Date created: Oct 20, 2017
+	 * Last modified: Oct 20, 2017
+	 * Desc: Horizontal enemy behaviour
+	*/
+
 	[SerializeField]
 	float minYSpeed = -2f;
 	[SerializeField]
@@ -18,6 +25,7 @@ public class EnemyController02 : MonoBehaviour {
 	private Vector2 _currentSpeed;
 
 	void Start () {
+		//Initialize
 		_transform = gameObject.GetComponent<Transform> ();
 		_currentPos = _transform.position;
 		Reset ();
@@ -42,6 +50,7 @@ public class EnemyController02 : MonoBehaviour {
 	}
 
 	public void Reset(){
+		//Produces random speed
 		float xSpeed = Random.Range (minXSpeed, maxXSpeed);
 		float ySpeed = Random.Range (minYSpeed, maxYSpeed);
 

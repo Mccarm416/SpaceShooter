@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-
+	//Public Variables
 	[SerializeField]
 	private float speed = 5f;
 	[SerializeField]
@@ -15,9 +15,16 @@ public class PlayerController : MonoBehaviour {
 	private float topY;
 	[SerializeField]
 	private float botY;
+	[SerializeField]
+	private float shootRate = 0.5f;
+	[SerializeField]
+	GameObject bullet;
 
+	//Private variables
 	private Transform _transform;
 	private Vector2 _currentPos;
+	private float nextShot = 0.0f;
+
 
 	void Start () {
 		//Initialize
@@ -38,6 +45,16 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
 			_currentPos -= new Vector2 (0, speed);
+		}
+
+		if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
+			_currentPos -= new Vector2 (0, speed);
+		}
+		//Player shoot
+		if (Input.GetKey (KeyCode.Space) && Time.time > nextShot) {
+			Instantiate (bullet).GetComponent<Transform> ().position = new Vector2(_currentPos.x + 20, _currentPos.y);
+			//Cooldown function
+			nextShot = Time.time + shootRate;
 		}
 		CheckBoundary ();
 		_transform.position = _currentPos;
